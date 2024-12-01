@@ -1,0 +1,210 @@
+:root {
+    --strongColor: #ff6600;
+    --whiteColor: #ffffff;
+    --blackColor: #000000;
+    --greyColor: #3b3b3b;
+    --primaryFont: "Titillium", sans-serif;
+    --secondaryFont: "Arial", sans-serif;
+    --smallTitleFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+    --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+    --bodyFontSize: 1rem;
+}
+
+@font-face {
+    font-family: "Titillium";
+    src: 
+    url("Fonts/Titillium_Web/TitilliumWeb-Bold.ttf") format(truetype),
+    url("Fonts/Titillium_Web/webfontkit-20241201-151545/titilliumweb-bold-webfont.woff") format(woff),
+    url("Fonts/Titillium_Web/webfontkit-20241201-151545/titilliumweb-bold-webfont.woff2") format(woff2);
+}
+
+* {
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+body {
+    font-family: var(--secondaryFont);
+    font-size: var(--bodyFontSize);
+    color: var(--greyColor);
+    text-align: center;
+    background-image: url(Images/solaris-background-3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    max-width: 90rem;
+    font-family: var(--headerFontSize);
+    font-size: var(--headerFontSize);
+    color: var(--strongColor);
+    padding: clamp(0.75rem, 2vw, 1.5rem);
+    align-content: center;
+    box-shadow: 0 -2vw 16px var(--blackColor);
+    background-color: var(--whiteColor);
+}
+
+.header-div-top {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 4vw;
+    align-items: center;
+    line-height: 0;
+}
+
+.header-div-logo-container {
+    max-width: 40%;
+    text-align: left;
+    margin: 0;
+}
+
+h1, h2, h3, .small-title {
+    font-family: var(--primaryFont);
+    text-transform: uppercase;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    max-width: 20ch;
+    font-size: var(--headerFontSize);
+    color: var(--strongColor);
+    line-height: 1.2em;
+    font-weight: 900;
+    margin: 1rem;
+}
+
+h2 {
+    max-width: 20ch;
+    font-size: var(--headerFontSize);
+    color: var(--strongColor);
+    line-height: 1em;
+    font-weight: 900;
+    margin: 1rem;
+}
+
+.big-p {
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    line-height: 1.5em;
+    text-align: center;
+    margin: 0 0 clamp(1.75rem, 3.92vw, 2.5rem) 0;
+}
+
+.small-title {
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    text-transform: uppercase;
+    line-height: 1.2em;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.section-padding {
+    padding: clamp(4vh, 4rem, 42vh) 4%;
+}
+
+.call-to-action {
+    all: unset;
+    font-family: var(--primaryFont);
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    padding: 0 3rem;
+    color: var(--whiteColor);
+    background-color: var(--strongColor);
+    border-radius: 32px;
+    text-transform: uppercase;
+}
+
+/* ==== HAMBURGER ICON ==== */
+
+#hamburguer-menu-icon {
+    min-width: 20%;
+    display: block;
+    cursor: pointer;
+    margin: 0;
+}
+
+#hamburguer-menu-icon.active {
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    max-width: 8vw;
+    height: 3px;
+    margin: 5px auto;
+    background-color: var(--strongColor);
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+#hamburguer-menu-icon.active .bar:nth-child(1) {
+    opacity: 0;
+}
+
+#hamburguer-menu-icon.active .bar:nth-child(2) {
+    transform: translateY(4px) rotate(45deg);
+}
+
+#hamburguer-menu-icon.active .bar:nth-child(3) {
+    transform: translateY(-4px) rotate(-45deg);
+}
+
+nav {
+    font-size: 1.125rem;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--whiteColor);
+    top: 8vh;
+    left: 100%;
+    gap: 0;
+    text-align: center;
+    box-shadow: inset 0px 8px 24px lightgrey;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(100%);
+}
+
+nav.active {
+    transform: translateX(-100%);
+    transition-delay: .2s;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    padding: 6vh;
+}
+
+nav ul li {
+    font-family: var(--primaryFont);
+    color: var(--strongColor);
+    list-style-type: none;
+}
+
+/* ==== MAIN ==== */
+
+main {
+    padding-top: clamp(12vh, 6rem, 42vh);
+}
+
+#section-statement-div-img {
+    padding: 8vh 0 4vh;
+}
+
+#section-productos {
+    background-color: var(--whiteColor);
+}
