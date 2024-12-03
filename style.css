@@ -3,6 +3,7 @@
     --whiteColor: #ffffff;
     --blackColor: #000000;
     --greyColor: #3b3b3b;
+    --lightGreyColor: #e7e7e7;
     --primaryFont: "Titillium", sans-serif;
     --secondaryFont: "Arial", sans-serif;
     --smallTitleFontSize: clamp(0.8125rem, 1.6vw, 1rem);
@@ -18,6 +19,10 @@
     url("Fonts/Titillium_Web/webfontkit-20241201-151545/titilliumweb-bold-webfont.woff2") format(woff2);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0 auto;
     box-sizing: border-box;
@@ -25,14 +30,30 @@
 
 img {
     max-width: 100%;
-    border-radius: 8px;
+}
+
+a {
+    all: unset;
+    cursor: pointer;
+}
+
+a:hover {
+    all: unset;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
 }
 
 body {
     font-family: var(--secondaryFont);
     font-size: var(--bodyFontSize);
     color: var(--greyColor);
-    text-align: center;
+    text-align: left;
     background-image: url(Images/solaris-background-3.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -42,25 +63,46 @@ body {
 
 header {
     position: fixed;
+    z-index: 10000;
     width: 100%;
-    max-width: 90rem;
     font-family: var(--headerFontSize);
     font-size: var(--headerFontSize);
     color: var(--strongColor);
-    padding: clamp(0.75rem, 2vw, 1.5rem);
     align-content: center;
     box-shadow: 0 -2vw 16px var(--blackColor);
-    background-color: var(--whiteColor);
+}
+
+header::before {
+    content: "";
+    width: 100%;
+    position: absolute;
+    height: 0vh;
+    background-color: #00000099;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    top: 0;
+    right: 0;
+    z-index: -11;
+    transform: height 0.3s, opacity 0.3s;
+}
+
+header.active::before {
+    height: 150vh;
+    opacity: 1;
 }
 
 .header-div-top {
     width: 100%;
+    max-width: 90rem;
+    padding: clamp(0.75rem, 2vw, 1.5rem);
     height: auto;
     display: flex;
     justify-content: space-between;
     gap: 4vw;
     align-items: center;
     line-height: 0;
+    background-color: var(--whiteColor);
 }
 
 .header-div-logo-container {
@@ -69,28 +111,37 @@ header {
     margin: 0;
 }
 
+.header-div-logo-container img {
+    border-radius: 0;
+}
+
 h1, h2, h3, .small-title {
     font-family: var(--primaryFont);
     text-transform: uppercase;
-    margin: 0 auto;
-    text-align: center;
+    margin: 1rem;
 }
 
 h1 {
     max-width: 20ch;
     font-size: var(--headerFontSize);
-    color: var(--strongColor);
+    color: var(--blackColor);
     line-height: 1.2em;
     font-weight: 900;
-    margin: 1rem;
 }
 
 h2 {
     max-width: 20ch;
     font-size: var(--headerFontSize);
-    color: var(--strongColor);
+    color: var(--blackColor);
     line-height: 1em;
     font-weight: 900;
+}
+
+h3 {
+    color: var(--blackColor);
+}
+
+p {
     margin: 1rem;
 }
 
@@ -106,24 +157,46 @@ h2 {
     text-transform: uppercase;
     line-height: 1.2em;
     font-weight: 700;
+    color: var(--strongColor);
     margin-bottom: 0.25rem;
 }
 
-.section-padding {
-    padding: clamp(4vh, 4rem, 42vh) 4%;
+.black-text {
+    color: var(--blackColor);
 }
 
-.call-to-action {
+.section-padding {
+    padding: clamp(4vh, 2rem, 42vh) 4%;
+}
+
+.div-double-button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.call-to-action, .info-button {
     all: unset;
     font-family: var(--primaryFont);
     font-size: 1rem;
     font-weight: 700;
     line-height: clamp(2.875rem, 5.5vw, 3.5rem);
-    padding: 0 3rem;
-    color: var(--whiteColor);
-    background-color: var(--strongColor);
     border-radius: 32px;
     text-transform: uppercase;
+}
+
+.call-to-action {
+    padding: 0 2rem;
+    color: var(--whiteColor);
+    background-color: var(--strongColor);
+}
+
+.info-button {
+    padding: 0 1.5rem;
+    color: var(--strongColor);
+}
+
+hr {
+    color: var(--strongColor);
 }
 
 /* ==== HAMBURGER ICON ==== */
@@ -168,17 +241,17 @@ nav {
     display: flex;
     flex-direction: column;
     background-color: var(--whiteColor);
-    top: 8vh;
-    left: 100%;
+    top: 0vh;
+    left: 0;
     gap: 0;
+    z-index: -1;
     text-align: center;
-    box-shadow: inset 0px 8px 24px lightgrey;
     transition: transform 0.3s ease-in-out;
-    transform: translateX(100%);
+    transform: translateY(-100%);
 }
 
 nav.active {
-    transform: translateX(-100%);
+    transform: translateY(10%);
     transition-delay: .2s;
 }
 
@@ -186,11 +259,12 @@ nav ul {
     display: flex;
     flex-direction: column;
     gap: 2vh;
-    padding: 6vh;
+    padding: 12vh 0;
 }
 
 nav ul li {
     font-family: var(--primaryFont);
+    font-size: 1.25rem;
     color: var(--strongColor);
     list-style-type: none;
 }
@@ -198,13 +272,147 @@ nav ul li {
 /* ==== MAIN ==== */
 
 main {
-    padding-top: clamp(12vh, 6rem, 42vh);
+    padding-top: clamp(4vh, 4rem, 42vh);
 }
 
-#section-statement-div-img {
-    padding: 8vh 0 4vh;
+#section-statement {
+    text-align: center;
 }
 
-#section-productos {
+#section-statement .section-padding {
+    padding: clamp(4vh, 8rem, 42vh) 4%;
+}
+
+#section-statement h1 {
+    color: var(--strongColor);
+}
+
+#section-statement .small-title {
+    color: var(--blackColor);
+}
+
+#section-beneficios {
+    text-align: center;
     background-color: var(--whiteColor);
+    padding-top: 2rem;
+}
+
+#section-beneficios .section-padding {
+    padding-bottom: 2vh;
+}
+
+#ul-cards-beneficios {
+    display: flex;
+    flex-direction: column;
+    gap: 8vh;
+    padding: 3rem 0;
+}
+
+#ul-cards-beneficios .card {
+    position: relative;
+    min-height: 225px;
+    background-color: var(--lightGreyColor);
+    padding: clamp(2.5rem, 1.5vh, 3.0625rem) 8%;
+    margin: 0 auto;
+}
+
+#ul-cards-beneficios .card::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    height: 0.5rem;
+    background-color: var(--strongColor);
+    margin: 0 auto;
+}
+
+#section-nosotros {
+    background-color: var(--whiteColor);
+}
+
+#section-nosotros img {
+    margin: 1rem 0;
+    border-bottom: 0.5rem solid var(--strongColor);
+}
+
+#productos-y-servicios {
+    padding-top: 2rem;
+    background-color: var(--lightGreyColor);
+}
+
+#productos-y-servicios hr {
+    margin: 2rem 0;
+}
+
+#section-productos-y-servicios-div-bottom {
+    margin: 1rem 0;
+}
+
+.productos-y-servicios-div {
+    padding: 1rem 0;
+}
+
+.productos-y-servicios-div h3 {
+    margin-bottom: 0;
+}
+
+.productos-y-servicios-div .small-title {
+    font-size: 0.75rem;
+}
+
+#section-contacto {
+    background-color: var(--whiteColor);
+}
+
+#section-contacto .section-padding > div {
+    margin: 3rem 0;
+}
+
+#section-contacto ul {
+    margin: 1.5rem 1rem;
+}
+
+#section-contacto ul li {
+    font-size: 1.125rem;
+    font-weight: 900;
+    margin: 1rem 0;
+}
+
+#contact-form form {
+    margin: 1rem;
+}
+
+.form-div-subject {
+    margin: 1rem 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.form-div-subject label {
+    font-size: var(--bodyFontSize);
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+
+.form-div-subject input {
+    font-family: var(--bodyFontSize);
+    font-size: var(--bodyFontSize);
+    width: 100%;
+    height: 36px;
+    margin-top: 0.5rem;
+}
+
+.form-div-subject textarea {
+    font-family: var(--bodyFontSize);
+    font-size: var(--bodyFontSize);
+    width: 100%;
+    height: 3rem;
+}
+
+#div-contact-form-button {
+    text-align: center;
+    margin: 2rem;
 }

@@ -24,37 +24,159 @@
             </div>
             <nav>
                 <ul>
-                    <li><a>Home</a></li>
-                    <li><a>Productos</a></li>
-                    <li><a>Servicios</a></li>
-                    <li><a>Nosotros</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#section-beneficios">Conocé</a></li>
+                    <li><a href="#productos-y-servicios">Soluciones</a></li>
+                    <li><a href="#section-nosotros">Nosotros</a></li>
                     <li><a>Contacto</a></li>
                 </ul>
             </nav>
         </header>
         <main>
-            <section>
+            <section id="section-statement">
                 <div class="section-padding">
                     <div class="section-div-text-container">
                         <span class="small-title">Energía limpia</span>
                         <h1>Reducí tus costos de energía</h1>
                         <p class="big-p">La energía solar reduce el costo de la electricidad al aprovechar una fuente gratuita y abundante, lo que genera ahorros a largo plazo, menor dependencia de tarifas y un aumento en el valor de la vivienda.</p>
-                        <button class="call-to-action">
-                            <a>
-                                Saber más
-                            </a>
-                        </button>
-                    </div>
-                    <div id="section-statement-div-img">
-                        <img src="Images/solaris-background.jpg">
+                        <div class="div-double-button-container">
+                            <button class="call-to-action">
+                                <a href="#section-beneficios">
+                                    Saber más
+                                </a>
+                            </button>
+                            <button class="info-button">
+                                <a href="#section-nosotros">
+                                    Nosotros
+                                </a>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </section>
-            <section id="section-productos">
+            <section id="section-beneficios">
                 <div class="section-padding">
-                    <span class="small-title">Que ofrecemos</span>
-                    <h2>Productos</h2>
-                    <p>Ofrecemos soluciones de energía solar que ayudan a reducir costos y dependencia de fuentes tradicionales, a la vez que promueven un enfoque más sostenible. Nuestros productos brindan una alternativa confiable y ecológica para quienes buscan optimizar su consumo energético.</p>
+                    <div>
+                        <span class="small-title">Porque energía solar</span>
+                        <h2>Soluciones sostenibles</h2>
+                        <p>Ofrecemos soluciones solares que reducen costos, dependencia de fuentes tradicionales y promueven la sostenibilidad, brindando una alternativa confiable y ecológica para optimizar el consumo energético.</p>    
+                    </div>
+                    <div class="grid-container">
+                        <ul id="ul-cards-beneficios">
+                            <li class="card">
+                                <h3>Independencia energética</h3>
+                                <p>
+                                    La energía solar te permite generar tu propia electricidad, reduciendo la dependencia de las redes eléctricas y asegurando un suministro más confiable.
+                                </p>
+                            </li>
+                            <li class="card">
+                                <h3>Reducción de costos</h3>
+                                <p>
+                                    Invertir en energía solar te permite ahorrar significativamente en tus facturas eléctricas, reduciendo costos operativos a largo plazo.
+                                </p>
+                            </li>
+                            <li class="card">
+                                <h3>Beneficios ambientales</h3>
+                                <p>
+                                    Al usar energía solar, reducis tu huella de carbono y contribuyen a la sostenibilidad, utilizando una fuente de energía limpia y renovable.
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section id="section-nosotros">
+                <div class="section-padding">
+                    <div class="text-container">
+                        <span class="small-title">Sobre nosotros</span>
+                        <h2>Tu socio energético de confianza</h2>
+                        <p>
+                            Somos una empresa joven y dinámica, comprometida con el futuro sostenible mediante el aprovechamiento de la energía solar. Nos enfocamos en proporcionar productos de alta calidad y un servicio técnico profesional, asegurando que cada proyecto se realice con responsabilidad y dedicación.
+                        </p>
+                    </div>
+                    <img src="Images/solaris-nosotros.jpg">
+                </div>
+            </section>
+            <section id="productos-y-servicios">
+                <div class="section-padding">
+                    <div id="section-productos-y-servicios-div-top">
+                        <div class="text-container">
+                            <h2 class="black-text">Prodcutos y servicios</h2>
+                            <p>
+                                Trabajamos con tecnologías avanzadas y materiales certificados para garantizar sistemas solares duraderos y de alto rendimiento. Cada proyecto es ejecutado con precisión y atención al detalle, asegurando no solo la máxima eficiencia energética, sino también la satisfacción total de nuestros clientes.
+                            </p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div id="section-productos-y-servicios-div-bottom">
+                        <div class="productos-y-servicios-div">
+                            <div class="text-container">
+                                <img src="Images/solaris-producto-crop.jpg">
+                                <h3>Paneles solares y conversores</h3>
+                                <span class="small-title">Calidad y eficiencia</span>
+                                <p>
+                                    Ofrecemos paneles solares de última generación y conversores de alto rendimiento, diseñados para maximizar la eficiencia energética y garantizar una larga vida útil.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="productos-y-servicios-div">
+                            <img src="Images/solaris-sevicios-crop.jpg">
+                            <div class="text-container">
+                                <h3>Servicio de instalación</h3>
+                                <span class="small-title">Atencion personalizada</span>
+                                <p>
+                                    Nuestro servicio de instalación de paneles solares y conversores está diseñado para garantizar una integración perfecta y eficiente de los sistemas en tu espacio. Contamos con un equipo de técnicos altamente capacitados que se encargan de cada detalle, desde el diseño personalizado hasta la instalación y puesta en marcha, asegurando un funcionamiento óptimo y seguro.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="section-contacto">
+                <div class="section-padding">
+                    <div class="text-container">
+                        <span class="small-title">Ponete en contacto</span>
+                        <h2>Contacto</h2>
+                        <ul>
+                            <li>
+                                +54 11 3245-11982
+                            </li>
+                            <li>
+                                contacto@solaris.com.ar
+                            </li>
+                            <li>
+                                Av. Gral. Anderson 1720, CABA, Buenos Aires
+                            </li>
+                        </ul>
+                    </div>
+                    <hr>
+                    <div id="contact-form">
+                        <h3>Envíanos un mensaje</h3>
+                        <div class="text-container">
+                            <p>Nos encantaría saber de vos. Por favor completa el formulario a continuación y alguien se comunicará contigo dentro de los 3 días hábiles.</p>
+                        </div>
+                        <form>
+                            <div class="form-div-subject">
+                                <label for="nombre">Nombre</label>
+                                <input type="text" name="nombre" placeholder="Tu nombre">
+                            </div>
+                            <div class="form-div-subject">
+                                <label for="email">Email</label>
+                                <input type="text" name="email" placeholder="Tu email">
+                            </div>
+                            <div class="form-div-subject">
+                                <label for="numero-telefonico">Teléfono</label>
+                                <input type="text" name="numero-telefonico" placeholder="Tu número">
+                            </div>
+                            <div class="form-div-subject">
+                                <label for="mensaje">Mensaje</label>
+                                <textarea name="mensaje" placeholder="Escribí tu mensaje..."></textarea>
+                            </div>
+                            <div id="div-contact-form-button">
+                                <button type="submit" class="call-to-action">Enviar mensaje</button>
+                            </div>
+                        </form>    
+                    </div> 
                 </div>
             </section>
         </main>
