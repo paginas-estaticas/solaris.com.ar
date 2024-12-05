@@ -12,25 +12,27 @@
     </head>
     <body>
         <header>
-            <div class="header-div-top">
-                <div class="header-div-logo-container">
-                    <img src="Images/Logo/1-solaris-logo.png" alt="logo">
+            <div id="header-padding">
+                <div class="header-div-top">
+                    <div class="header-div-logo-container">
+                        <img src="Images/Logo/1-solaris-logo.png" alt="logo">
+                    </div>
+                    <div id="hamburguer-menu-icon">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
                 </div>
-                <div id="hamburguer-menu-icon">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
+                <nav>
+                    <ul>
+                        <li class="nav-li-element"><a href="#section-statement">Home</a></li>
+                        <li class="nav-li-element"><a href="#section-beneficios">Conocé</a></li>
+                        <li class="nav-li-element"><a href="#productos-y-servicios">Soluciones</a></li>
+                        <li class="nav-li-element"><a href="#section-nosotros">Nosotros</a></li>
+                        <li class="nav-li-element"><a href="#section-contacto">Contacto</a></li>
+                    </ul>
+                </nav>
             </div>
-            <nav>
-                <ul>
-                    <li class="nav-li-element"><a href="index.html">Home</a></li>
-                    <li class="nav-li-element"><a href="#section-beneficios">Conocé</a></li>
-                    <li class="nav-li-element"><a href="#productos-y-servicios">Soluciones</a></li>
-                    <li class="nav-li-element"><a href="#section-nosotros">Nosotros</a></li>
-                    <li class="nav-li-element"><a href="#section-contacto">Contacto</a></li>
-                </ul>
-            </nav>
         </header>
         <main>
             <section id="section-statement">
@@ -89,9 +91,15 @@
                 <div class="section-padding">
                     <div class="text-container">
                         <span class="small-title">Sobre nosotros</span>
-                        <h2>Tu socio energético de confianza</h2>
-                        <p>
-                            Somos una empresa joven y dinámica, comprometida con el futuro sostenible mediante el aprovechamiento de la energía solar. Nos enfocamos en proporcionar productos de alta calidad y un servicio técnico profesional, asegurando que cada proyecto se realice con responsabilidad y dedicación.
+                        <h2 class="left-aligned">Tu socio energético de confianza</h2>
+                        <p class="left-aligned">
+                            Solaris es una empresa joven y dinámica, nacida con la misión de acelerar la transición hacia la energía solar en todo el país. Fundada en 2019 por un equipo de profesionales apasionados por la sostenibilidad y la innovación, nos hemos consolidado rápidamente como un referente en el sector. Con un enfoque fresco y comprometido, en Solaris trabajamos para ofrecer soluciones energéticas limpias, eficientes y accesibles, siempre orientados a las necesidades y objetivos de nuestros clientes
+                        </p>
+                        <p class="left-aligned">
+                            Desde nuestros inicios, nos hemos enfocado en brindar sistemas fotovoltaicos de alta calidad, con una atención especial a la eficiencia energética y al cuidado del medio ambiente. Adaptamos cada proyecto, ya sea residencial, comercial o industrial, a las necesidades particulares de nuestros clientes, asegurando que cada instalación maximice el aprovechamiento de la energía solar.
+                        </p>
+                        <p class="left-aligned">
+                            En Solaris, sabemos que el éxito de nuestros proyectos radica en un equipo altamente capacitado y motivado. Por eso, contamos con una red de instaladores y técnicos especializados que garantizan que cada instalación se realice bajo los más altos estándares de calidad, seguridad y eficiencia, con un acompañamiento cercano y personalizado en cada etapa del proceso.
                         </p>
                     </div>
                     <img src="Images/solaris-nosotros.jpg">
@@ -101,8 +109,8 @@
                 <div class="section-padding">
                     <div id="section-productos-y-servicios-div-top">
                         <div class="text-container">
-                            <h2 class="black-text">Prodcutos y servicios</h2>
-                            <p>
+                            <h2 class="black-text left-aligned">Prodcutos y servicios</h2>
+                            <p class="left-aligned">
                                 Trabajamos con tecnologías avanzadas y materiales certificados para garantizar sistemas solares duraderos y de alto rendimiento. Cada proyecto es ejecutado con precisión y atención al detalle, asegurando no solo la máxima eficiencia energética, sino también la satisfacción total de nuestros clientes.
                             </p>
                         </div>
@@ -110,11 +118,11 @@
                     <hr>
                     <div id="section-productos-y-servicios-div-bottom">
                         <div class="productos-y-servicios-div">
+                            <img src="Images/solaris-producto-crop.jpg">
                             <div class="text-container">
-                                <img src="Images/solaris-producto-crop.jpg">
                                 <h3>Paneles solares y conversores</h3>
                                 <span class="small-title">Calidad y eficiencia</span>
-                                <p>
+                                <p class="left-aligned">
                                     Ofrecemos paneles solares de última generación y conversores de alto rendimiento, diseñados para maximizar la eficiencia energética y garantizar una larga vida útil.
                                 </p>
                             </div>
@@ -123,8 +131,8 @@
                             <img src="Images/solaris-sevicios-crop.jpg">
                             <div class="text-container">
                                 <h3>Servicio de instalación</h3>
-                                <span class="small-title">Atencion personalizada</span>
-                                <p>
+                                <span class="small-title">Instalaciones a medida</span>
+                                <p class="left-aligned">
                                     Nuestro servicio de instalación de paneles solares y conversores está diseñado para garantizar una integración perfecta y eficiente de los sistemas en tu espacio. Contamos con un equipo de técnicos altamente capacitados que se encargan de cada detalle, desde el diseño personalizado hasta la instalación y puesta en marcha, asegurando un funcionamiento óptimo y seguro.
                                 </p>
                             </div>
@@ -132,20 +140,71 @@
                     </div>
                 </div>
             </section>
+            <section id="section-eficiencia">
+                <div class="section-padding">
+                    <div class="text-container">
+                        <h2>Creemos en la <span class="orange-text">eficiencia</span></h2>
+                        <p class="align-left">
+                            En Solaris entendemos la importancia de optimizar cada recurso y maximizar la eficiencia en el uso de la energía solar. Nos comprometemos a ofrecer soluciones energéticas altamente eficientes que no solo reducen el impacto ambiental, sino que también generan un ahorro tangible para nuestros clientes. Nuestro equipo de profesionales está en constante actualización sobre las últimas tecnologías solares, asegurando que cada instalación se adapte a las necesidades específicas de cada proyecto. En Solaris, estamos aquí para garantizar que aproveches al máximo la energía del sol, con la mayor eficiencia y rentabilidad.
+                        </p>
+                    </div>
+                    <div id="eficiencia-div-ul">
+                        <ul>
+                            <li>
+                                <div class="eficiencia-li-title">
+                                    <img src="Images/icons/sun-orange.svg">
+                                    <h3>Atención 100% personalizada</h3>
+                                </div>
+                                <p>
+                                    Nos adaptamos a las necesidades específicas de cada cliente para brindar soluciones solares que se ajusten perfectamente a sus objetivos y expectativas.
+                                </p>
+                            </li>
+                            <li>
+                                <div class="eficiencia-li-title">
+                                    <img src="Images/icons/sun-orange.svg">
+                                    <h3>Mano de obra cualificada</h3>
+                                </div>
+                                <p>
+                                    Contamos con un equipo de profesionales altamente cualificados, comprometidos con la excelencia y la seguridad en cada instalación, garantizando un trabajo de calidad superior en todo momento.
+                                </p>
+                            </li>
+                            <li>
+                                <div class="eficiencia-li-title">
+                                    <img src="Images/icons/sun-orange.svg">
+                                    <h3>Instalación rápida</h3>
+                                </div>
+                                <p>
+                                    Nos especializamos en ofrecer instalaciones solares rápidas y eficientes, minimizando los tiempos de ejecución sin comprometer la calidad.
+                                </p>
+                            </li>
+                        </ul>
+                                             
+                    </div>
+                </div>
+            </section>
             <section id="section-contacto">
                 <div class="section-padding">
                     <div class="text-container">
                         <span class="small-title">Ponete en contacto</span>
-                        <h2>Contacto</h2>
+                        <h2 class="left-aligned">Contacto</h2>
                         <ul>
-                            <li>
-                                +54 11 3245-11982
+                            <li class="medio-de-contacto">
+                                <img src="Images/icons/phone.svg">
+                                <p>
+                                    +54 11 3245-11982
+                                </p>
                             </li>
-                            <li>
-                                contacto@solaris.com.ar
+                            <li class="medio-de-contacto">
+                                <img src="Images/icons/mail.svg">
+                                <p>
+                                    contacto@solaris.com.ar
+                                </p>
                             </li>
-                            <li>
-                                Av. Gral. Anderson 1720, CABA, Buenos Aires
+                            <li class="medio-de-contacto">
+                                <img src="Images/icons/pin.svg">
+                                <p>
+                                    Av. Gral. Anderson 1720, CABA, Buenos Aires
+                                </p>
                             </li>
                         </ul>
                     </div>
@@ -153,7 +212,9 @@
                     <div id="contact-form">
                         <h3>Envíanos un mensaje</h3>
                         <div class="text-container">
-                            <p>Nos encantaría saber de vos. Por favor completa el formulario a continuación y alguien se comunicará contigo dentro de los 3 días hábiles.</p>
+                            <p class="left-aligned">
+                                Nos encantaría saber de vos. Por favor completa el formulario a continuación y alguien se comunicará dentro de los siguientes 3 días hábiles.
+                            </p>
                         </div>
                         <form>
                             <div class="form-div-subject">
@@ -194,7 +255,7 @@
                     <div id="footer-div-top-information" class="footer-section">
                         <h4>Información</h4>
                         <ul>
-                            <li><a href="index.html">Página principal</a></li>
+                            <li><a href="#section-statement">Página principal</a></li>
                             <li><a href="#nosotros-section">Nosotros</a></li>
                             <li><a href="#productos-y-servicios">Productos y servicios</a></li>
                             <li><a href="#section-contacto">Contacto</a></li>
