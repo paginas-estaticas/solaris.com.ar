@@ -3,7 +3,7 @@
     --whiteColor: #ffffff;
     --blackColor: #000000;
     --greyColor: #3b3b3b;
-    --lightGreyColor: #f2f2f2;
+    --lightGreyColor: #f7f7f7;
     --primaryFont: "Titillium", sans-serif;
     --secondaryFont: "Arial", sans-serif;
     --smallTitleFontSize: clamp(0.8125rem, 1.6vw, 1rem);
@@ -494,7 +494,7 @@ main {
 }
 
 footer {
-    background-color: #eee;
+    background-color: #f0f0f0;
 }
 
 footer a:hover {
@@ -637,12 +637,13 @@ footer hr {
     }
 
     #section-eficiencia .section-padding {
+        display: flex;
+        justify-content: space-between;
         padding-top: 6rem;
         padding-bottom: 6rem;
     }
 
     #eficiencia-div-ul ul {
-        flex-direction: row;
         justify-content: center;
     }
 
