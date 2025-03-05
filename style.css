@@ -115,6 +115,7 @@ header.active::before {
     max-width: 40%;
     text-align: left;
     margin: 0;
+    cursor: pointer;
 }
 
 .header-div-logo-container img {
@@ -449,7 +450,7 @@ main {
     background-color: var(--lightGreyColor);
 }
 
-#section-contacto .section-padding > div {
+#section-contacto-contacto .common-padding > div {
     margin: 3rem 0;
 }
 
