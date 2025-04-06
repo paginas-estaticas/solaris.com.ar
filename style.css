@@ -37,10 +37,6 @@ a {
     cursor: pointer;
 }
 
-a:hover {
-    all: unset;
-}
-
 ul {
     padding: 0;
 }
@@ -184,7 +180,7 @@ p {
 
 .section-padding  {
     max-width: 90rem;
-    padding: clamp(4vh, 2rem, 42vh) 4%;
+    padding: clamp(4vh, 2rem, 42vh) 4% 1.5rem;
 }
 
 .div-double-button-container {
@@ -207,6 +203,10 @@ p {
     padding: 0 2rem;
     color: var(--whiteColor);
     background-color: var(--strongColor);
+}
+
+.call-to-action:hover {
+    background-color: #f46100;
 }
 
 .info-button {
@@ -319,14 +319,14 @@ main {
 }
 
 #section-beneficios .section-padding {
-    padding-bottom: 2vh;
+    padding-bottom: 0;
 }
 
 #ul-cards-beneficios {
     display: flex;
     flex-direction: column;
     gap: 64px;
-    padding: 3rem 0;
+    padding: 4rem 0 0;
 }
 
 #ul-cards-beneficios .card {
@@ -350,9 +350,36 @@ main {
     margin: 0 auto;
 }
 
+.benficios-title-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.benficios-title-container h3 {
+    margin: 0.25rem;
+    padding: 1rem 0;
+    line-height: 1.25rem;
+}
+
+.benficios-title-container svg {
+    scale: 1.5;
+}
+
+.benficios-title-container svg path {
+    fill: var(--strongColor);
+}
+
 #section-nosotros {
     padding-top: 4rem;
     background-color: var(--whiteColor);
+}
+
+#div-nosotros-button {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
 }
 
 #section-nosotros img {
@@ -367,6 +394,11 @@ main {
 
 #productos-y-servicios hr {
     margin: 2rem 0;
+}
+
+#productos-y-servicios .button-container {
+    display: flex;
+    padding-top: 1rem;
 }
 
 #section-productos-y-servicios-div-bottom {
@@ -446,8 +478,12 @@ main {
 }
 
 #section-contacto {
-    padding-top: 1rem;
+    padding-top: 2.75rem;
     background-color: var(--lightGreyColor);
+}
+
+#section-contacto h2 {
+    margin: 0.5rem 0 1rem;
 }
 
 #section-contacto-contacto .common-padding > div {
@@ -515,6 +551,10 @@ main {
 
 footer {
     background-color: #f0f0f0;
+}
+
+footer .section-padding {
+    padding-bottom: 0;
 }
 
 footer a:hover {
@@ -616,6 +656,10 @@ footer hr {
         margin: 0;
     }
 
+    .section-padding {
+        padding: clamp(4vh, 2rem, 42vh) 4% 6rem;
+    }
+
     #ul-cards-beneficios {
         flex-direction: row;
     }
@@ -633,6 +677,10 @@ footer hr {
         display: flex;
         justify-content: space-around;
         flex-direction: row-reverse;
+    }
+
+    #div-nosotros-button {
+        justify-content: left;
     }
 
     #section-nosotros img {
@@ -671,6 +719,10 @@ footer hr {
         display: flex;
         justify-content: space-between;
         flex-direction: row;
+    }
+
+    #section-contacto {
+        padding-top: 3.25rem;
     }
 
     .medio-de-contacto p {
