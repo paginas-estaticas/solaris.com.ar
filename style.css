@@ -126,7 +126,7 @@ h1, h2, h3, .small-title {
 
 h1 {
     max-width: 20ch;
-    font-size: var(--headerFontSize);
+    font-size: 3rem;
     color: var(--blackColor);
     line-height: 1.2em;
     font-weight: 900;
@@ -148,6 +148,7 @@ p {
     margin: 0 auto;
     padding: 0.25rem 0;
     max-width: 64ch;
+    line-height: 1.5rem;
 }
 
 .big-p {
@@ -333,7 +334,7 @@ main {
     position: relative;
     min-height: 225px;
     background-color: var(--lightGreyColor);
-    padding: clamp(2.5rem, 1.5vh, 3.0625rem) 8%;
+    padding: clamp(2.5rem, 1.5vh, 3.0625rem) 2rem;
     margin: 0 auto;
 }
 
@@ -393,7 +394,8 @@ main {
 }
 
 #productos-y-servicios hr {
-    margin: 2rem 0;
+    margin: 1rem 0;
+    color: whitesmoke;
 }
 
 #productos-y-servicios .button-container {
@@ -430,23 +432,35 @@ main {
 
 .productos-y-servicios-div h3 {
     margin-bottom: 0;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
 }
 
 .productos-y-servicios-div .small-title {
-    font-size: 0.75rem;
+    font-size: 1rem;
+    line-height: 2rem;
+}
+
+.productos-y-servicios-div .left-aligned {
+    margin: 0.5rem 0;
 }
 
 #section-eficiencia {
     padding-top: 1rem;
     background-color: var(--whiteColor);
+    background-image: url("Images/background-2.webp");
+    background-position: bottom;
+    background-attachment: fixed;
 }
 
 #section-eficiencia h2{
     margin: 1rem 0;
+    color: white;
 }
 
 #section-eficiencia p {
     margin: auto 0;
+    color: white;
 }
 
 #eficiencia-div-ul ul {
@@ -470,6 +484,7 @@ main {
 
 .eficiencia-li-title h3 {
     margin: 0;
+    color: white;
 }
 
 .eficiencia-li-title img {
@@ -534,6 +549,9 @@ main {
     width: 100%;
     height: 36px;
     margin-top: 0.5rem;
+    padding: 0.25rem 1rem;
+    border: none;
+    border-radius: 8px;
 }
 
 .form-div-subject textarea {
@@ -542,6 +560,9 @@ main {
     width: 100%;
     height: 24vh;
     margin-top: 0.5rem;
+    padding: 0.25rem 1rem;
+    border: none;
+    border-radius: 8px;
 }
 
 #div-contact-form-button {
@@ -670,13 +691,17 @@ footer hr {
 
     .card p {
         font-size: 1rem;
-        line-height: 1.25rem;
+    }
+
+    .big-p {
+        font-size: 1.125rem;
     }
 
     #section-nosotros .section-padding {
         display: flex;
         justify-content: space-around;
         flex-direction: row-reverse;
+        align-items: center;
     }
 
     #div-nosotros-button {
@@ -688,9 +713,14 @@ footer hr {
         margin: 0 auto;
     }
 
+    #productos-y-servicios .section-padding {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
     .productos-y-servicios-div {
         display: flex;
-        align-items: flex-start;
+        align-items: center;
         flex-direction: row-reverse;
         justify-content: space-between;
     }
@@ -707,8 +737,13 @@ footer hr {
     #section-eficiencia .section-padding {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         padding-top: 6rem;
         padding-bottom: 6rem;
+    }
+
+    #section-eficiencia .section-padding .text-container:first-child {
+        padding-right: 2rem;
     }
 
     #eficiencia-div-ul ul {
